@@ -11,7 +11,7 @@ class HelloWorldWindow(pyglet.window.Window):
         pyglet.clock.schedule_interval(self.update, 1.0/fps)
         pyglet.clock.set_fps_limit(fps)
         self.name = name
-        self.fps_display = pyglet.clock.ClockDisplay()
+        self.fps_display = pyglet.window.FPSDisplay(self)
         self.fps = fps
         self.poses = [0., 0., 0.]
         self.frame_cnt = 0
